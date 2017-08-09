@@ -1,33 +1,92 @@
 <!DOCTYPE html>
 <html>
 <head>
-<title>Portfolio</title>
+<title>Najib Osman</title>
 <%= csrf_meta_tags %>
-<meta name="viewport" content="width=device-width, initial-scale=1"/>
-<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+<!--Let browser know website is optimized for mobile-->
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
 <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+<!--Import jQuery before materialize.js-->
+<script type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+<!-- Compiled and minified JavaScript -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.1/js/materialize.min.js"></script>
 <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
 </head>
 
 <body>
- <ul id="slide-out" class="side-nav">
-    <li><div class="user-view">
-      <div class="background">
-        <img src="images/office.jpg">
-      </div>
-      <a href="#!user"><img class="circle" src="images/yuna.jpg"></a>
-<a href="#!name"><span class="white-text name">John Doe</span></a>
-<a href="#!email"><span class="white-text email">jdandturk@gmail.com</span></a>
-</div></li>
-<li><a href="#!"><i class="material-icons">cloud</i>First Link With Icon</a></li>
-<li><a href="#!">Second Link</a></li>
-<li><div class="divider"></div></li>
-<li><a class="subheader">Subheader</a></li>
-<li><a class="waves-effect" href="#!">Third Link With Waves</a></li>
-</ul>
-<a href="#" data-activates="slide-out" class="button-collapse"><i class="material-icons">menu</i></a>
 
+  <nav>
+    <div class="nav-wrapper">
+      <a href="/" class="brand-logo">Najib Osman</a>
+<a href="#" data-activates="mobile-demo" class="button-collapse"><i class="material-icons">menu</i></a>
+<ul class="right hide-on-med-and-down">
+<li><a href="sass.html">About Me</a></li>
+<li><a href="/projects">Projects</a></li>
+<li><a href="/skills">Skills</a></li>
+<li><a href=".page-footer">Contact Me</a></li>
+</ul>
+<ul class="side-nav" id="mobile-demo">
+<li><a href="sass.html">About Me</a></li>
+<li><a href="badges.html">Projects</a></li>
+<li><a href="collapsible.html">Skills</a></li>
+<li><a href="mobile.html">Contact Me</a></li>
+</ul>
+</div>
+</nav>
 
 <%= yield %>
+
+<footer class="page-footer">
+<div class="container">
+<div class="row">
+<div class="col l6 s12">
+<form id="contact" class="col s12" action="contact.php" method="post">
+<div class="row center">
+<h5 class="white-text">Contact Me!</h5>
+<div class="input-field col s6">
+<i class="mdi-action-account-circle prefix white-text"></i>
+<input id="icon_prefix" name="name" type="text" class="validate white-text">
+<label for="icon_prefix" class="white-text">First Name</label>
+</div>
+<div class="input-field col s6">
+<i class="mdi-communication-email prefix white-text"></i>
+<input id="icon_email" name="email" type="email" class="validate white-text">
+<label for="icon_email" class="white-text">Email-id</label>
+</div>
+<div class="input-field col s12">
+<i class="mdi-editor-mode-edit prefix white-text"></i>
+<textarea id="icon_prefix2" name="message" class="materialize-textarea white-text"></textarea>
+<label for="icon_prefix2" class="white-text">Message</label>
+</div>
+<div class="col offset-s7 s5">
+<button class="btn waves-effect waves-light red darken-1" type="submit">Submit
+<i class="mdi-content-send right white-text"></i>
+</button>
+</div>
+</div>
+</form>
+</div>
+<div class="col l4 offset-l2 s12">
+<h5 class="white-text">Social media</h5>
+<ul>
+<li><a class="grey-text text-lighten-3" href="https://www.facebook.com/profile.php?id=100004647108022">Facebook</a></li>
+<li><a class="grey-text text-lighten-3" href="https://twitter.com/Naajib38Othmern">Twitter</a></li>
+<li><a class="grey-text text-lighten-3" href="https://github.com/NajibOsman">Github</a></li>
+<li><a class="grey-text text-lighten-3" href="naajib38@gmail.com
+">Email</a></li>
+</ul>
+</div>
+</div>
+</div>
+<div class="footer-copyright">
+<div class="container">
+© 2017 Copyright
+<a class="grey-text text-lighten-4 right" href="https://github.com/NajibOsman/portfolio">Created by Najib</a>
+</div>
+</div>
+</footer>
+
 </body>
 </html>
