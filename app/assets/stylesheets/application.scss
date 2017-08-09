@@ -13,4 +13,21 @@
  *= require_tree .
  *= require_self
  */
- 
+ @import "materialize";
+ @import "https://fonts.googleapis.com/icon?family=Material+Icons";
+
+  body {
+    display: flex;
+    min-height: 100vh;
+    flex-direction: column;
+  }
+
+  main {
+    flex: 1 0 auto;
+  }
+.nav-wrapper{
+	background-color: #202D50;
+}
+.page-footer{
+	background-color: #202D50;
+}
