@@ -1,2 +1,22 @@
-<h1>Home#index</h1>
+<% content_for(:navbar) do %>
+  <%= link_to 'Home', root_path , {class:'breadcrumb'}%>
+<% end %>
+
+<!-- Side Menu -->
+<a id="menu-toggle" href="#" class="btn btn-primary btn-lg toggle"><i class="icon-reorder"></i></a>
+<div id="sidebar-wrapper">
+<ul class="sidebar-nav">
+<a id="menu-close" href="#" class="btn btn-primary btn-lg pull-right toggle"><i class="icon-remove"></i></a>
+<li class="sidebar-brand" style="color:#666666">Abdulmajid Osman</li>
+<li><a href="#">Home</a></li>
+<li><a href="#">Blogs</a></li>
+<li><a href="#skills">Skills</a></li>
+<li><a href="#project">Projects</a></li>
+<li><a href="/">Log In</a></li>
+</ul>
+</div>
+<!-- /Side Menu -->
+
+
+<h1>Welcome to my Portfolio </h1>
 <p>Find me in app/views/home/index.html.erb</p>
