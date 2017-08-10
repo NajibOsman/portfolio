@@ -1,8 +1,7 @@
 <h1><%= @project.name%></h1>
-Views = <%= @project.views%>
-description= <%= @project.description%>
-github <a target="_blank" href="<%= @project.github%>">link</a>
-live <a target="_blank" href="<%= @project.live%>">link</a>
+Views : <%= @project.views%><br>
+description: <%= @project.description%><br>
+Github <a target="_blank" href="<%= @project.github%>">link</a>
 
 <hr>
 <p><%= link_to 'Edit Project', edit_project_path(@project)%></p>
@@ -10,3 +9,5 @@ live <a target="_blank" href="<%= @project.live%>">link</a>
   :data => {:confirm => "Are you sure?",
             :method => "delete"}
   %></p>
+
+<p><%= link_to "Return to projects", projects_path %></p>
