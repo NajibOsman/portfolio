@@ -1,0 +1,13 @@
+<h1><%= @blog.name%></h1>
+Views : <%= @project.views%><br>
+description: <%= @project.description%><br>
+Github <a target="_blank" href="<%= @project.github%>">link</a>
+
+<hr>
+<p><%= link_to 'Edit Post', edit_blog_path(@project)%></p>
+<p><%= link_to 'Delete Post', blog_path(@project),
+  :data => {:confirm => "Are you sure?",
+            :method => "delete"}
+  %></p>
+
+<p><%= link_to "Return to Blog", blogs_path %></p>
