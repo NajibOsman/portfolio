@@ -4,8 +4,5 @@
   <li><%= link_to skill.name, skill_path(skill) %></li>
 <% end %>
 </ol>
-<% else %>
-<p>There are no tasks yet!</p>
-<% end %>
 
-<p><%= link_to "Add a skill", new_skill_project_path(@skill) %></p>
+<p><%= link_to "Add a skill", new_skill_path(@skill) %></p>
