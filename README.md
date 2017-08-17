@@ -1,24 +1,44 @@
-# README
+# _Personal Portfolio_
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+##### This application is my portfolio website that consist of my educational background plud all the work i have done so far.
 
-Things you may want to cover:
+## Technologies Used
 
-* Ruby version
+Application: Ruby on Rails, Active Record<br>
+Testing: SimpleCov, Factory_girl<br>
+Database: Postgres
 
-* System dependencies
+Installation
+------------
 
-* Configuration
+```
+$ git clone https://github.com/NajibOsman/portfolio
+```
 
-* Database creation
+Install required gems:
+```
+$ bundle install
+```
 
-* Database initialization
+Create databases:
+```
+rake db:create
+rake db:migrate
+```
 
-* How to run the test suite
+Start the webserver:
+```
+$ rails s
+```
 
-* Services (job queues, cache servers, search engines, etc.)
+Navigate to `localhost:3000` in browser.
 
-* Deployment instructions
+## Versioning
 
-* ...
+I use version  -Rails v5.1.3
+
+
+License
+-------
+
+This project is licensed under the MIT License 
