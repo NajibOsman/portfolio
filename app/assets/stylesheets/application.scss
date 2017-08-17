@@ -12,6 +12,7 @@
  *
  *= require_tree .
  *= require_self
+
  */
  @import "materialize";
  @import "https://fonts.googleapis.com/icon?family=Material+Icons";
@@ -36,4 +37,7 @@
   background-repeat: no-repeat;
   background-size: cover;
 
+}
+#footer{
+  background-color: #202D50;
 }

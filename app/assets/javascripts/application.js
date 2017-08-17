@@ -17,6 +17,7 @@
 //= require turbolinks
 //= require_tree .
 //= require materialize
+//= require toastr
 $(document).ready(function() {
   $('select').material_select();
   $('.collapsible').collapsible();
