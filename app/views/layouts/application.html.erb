@@ -40,22 +40,13 @@
 </div>
 </nav>
 
-<% unless flash.empty? %>
-<script type="text/javascript">
-<% flash.each do |f| %>
-  <% type = f[0].to_s.gsub('alert', 'error').gsub('notice', 'info') %>
-  toastr['<%= type %>']('<%= f[1] %>');
-<% end %>
-</script>
-<% end %>
-
 <%= yield %>
 
 <footer class="page-footer" id="footer">
 <div class="container">
 <div class="row">
 <div class="col l6 s12">
-<form id="contact" class="col s12" action="contact.php" method="post">
+<form id="contact" class="col s12" action="mailto:naajib38@gmail.com" method="post" enctype="text/plain">
 <div class="row center">
 <h5 class="white-text">Contact Me!</h5>
 <div class="input-field col s6">
@@ -87,8 +78,7 @@
 <li><a class="grey-text text-lighten-3" href="https://www.facebook.com/profile.php?id=100004647108022">Facebook</a></li>
 <li><a class="grey-text text-lighten-3" href="https://twitter.com/Naajib38Othmern">Twitter</a></li>
 <li><a class="grey-text text-lighten-3" href="https://github.com/NajibOsman">Github</a></li>
-<li><a class="grey-text text-lighten-3" href="naajib38@gmail.com
-">Email</a></li>
+<li><a class="grey-text text-lighten-3" href="mailto:naajib38@gmail.com">Email</a></li>
 </ul>
 </div>
 </div>
