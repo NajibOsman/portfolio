@@ -17,24 +17,12 @@
 <%= @post.tags %>
 </p>
 
-<%if current_user && current_user.user_role?%>
-<div class="add-comment row">
-<div class="col-sm-12">
-<h4>Add a comment</h4>
-<%= form_for :comment, url: post_comments_path(@post) do |f| %>
-  <div class="form-group">
-  <%= f.text_area :body, class: "form-control", placeholder: "Comment here", rows: 5, required: true %>
-  </div>
-  <div class="form-group">
-  <%= f.button "comment", class: "btn btn-success" %>
-  </div>
-  </div>
-  <%end%>
-  <%else%>
-  <h5>you need to sign in to comment</h5>
-  <%= link_to "Log in", new_user_session_path%>
-  <%= link_to "Sign Up", new_user_registration_path%>
-  <%end%>
+<ul class="collection with-header">
+  <li class="collection-header"><h4> <%= @post.comments.count %>Comments</h4></li>
+  <%= render @post.comments %>
+  <h5>Add comments:</h5>
+  <%= render 'comments/form' %>
+
 
   <%= link_to 'Back', posts_path %>
   </div>
