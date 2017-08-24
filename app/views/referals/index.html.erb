@@ -1,0 +1,16 @@
+<h1>Referals</h1>
+<%= link_to "Add Referree", new_referal_path, id:"new_referal_link", remote: true%>
+<br>
+<hr>
+<div id="all_referals">
+	<%=render @referals%>
+</div>
+
+<ul>
+	<% @referals.each do |r|%>
+	<li><%= r.name %></li>
+	<li><%= r.email %></li>
+	<li><%= r.phone %></li>
+	<li><%= r.content %></li>
+	<% end %>
+</ul>

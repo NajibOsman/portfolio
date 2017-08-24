@@ -1,0 +1,30 @@
+<%= form_for @referal, remote:true do |f| %>
+	<% if @referal.errors.any? %>
+	<h2><%= pluralize(@referal.errors.count,"error")%> prevented this referal from saving:</h2>
+	<ul>
+		<% @referal.errors.full_messages.each do |msg|%>
+		<li><%= msg %></li>
+		<%end%>
+	</ul>
+	<%end%>
+
+<div class="field">
+	<%= f.label :Name %><br>
+	<%= f.text_field :name%>
+</div>
+<div class="field">
+	<%= f.label :Email%><br>
+	<%= f.text_field :email%>
+</div>
+<div class="field">
+	<%= f.label :Phone %><br>
+	<%= f.text_field :phone%>
+</div>
+<div class="field">
+	<%= f.label :Content %><br>
+	<%= f.text_field :content%>
+</div>
+	<br>
+	<br>
+	<%= f.submit %>
+	<%end%>

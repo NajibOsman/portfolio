@@ -1,0 +1,10 @@
+<%= form_for referal do |f|%>
+<%= f.label :Name,referal.name %><br>
+<%= f.label :Email,referal.email %><br>
+<%= f.label :phone,referal.phone %><br>
+<%= f.label :Content,referal.content %><br>
+<%= link_to "Delete Referal", referal, method: :delete, data: {confirm: "Are you sure?"}, remote: true %>
+<br>
+<hr>
+<%end%>
+<hr>
