@@ -5,6 +5,7 @@ class User < ApplicationRecord
     :recoverable, :rememberable, :trackable, :validatable
   has_many :posts
   has_many :comments
+  has_many :referals
 
   # after_create :send_admin_mail
   # def send_admin_mail
