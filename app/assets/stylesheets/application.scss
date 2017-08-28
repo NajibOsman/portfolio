@@ -29,13 +29,65 @@
 .nav-wrapper{
 	background-color: #202D50;
 }
-.page-footer{
-	background-color: #202D50;
+
+.cd-headline.type .cd-words-wrapper {
+    vertical-align: top;
+    overflow: hidden;
 }
-.parallax{
-  background-image: url("https://scontent.cdninstagram.com/t51.2885-15/s480x480/e35/c161.0.758.758/13181509_1731937047074587_102012206_n.jpg?ig_cache_key=MTI0Njc2NzY1MjM5MDU4OTEyOQ%3D%3D.2.c");
+
+.cd-headline.type .cd-words-wrapper::after {
+    /* vertical bar */
+    content: '';
+    position: absolute;
+    right: 0;
+    top: 50%;
+    bottom: auto;
+    -webkit-transform: translateY(-50%);
+    -moz-transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
+    -o-transform: translateY(-50%);
+    transform: translateY(-50%);
+    height: 90%;
+    width: 1px;
+    background-color: #aebcb9;
+}
+
+.cd-headline.type .cd-words-wrapper.waiting::after {
+    -webkit-animation: cd-pulse 1s infinite;
+    -moz-animation: cd-pulse 1s infinite;
+    animation: cd-pulse 1s infinite;
+}
+.cd-headline.type .cd-words-wrapper.selected {
+    background-color: #FFF;
+}
+
+.cd-headline.type .cd-words-wrapper.selected::after {
+    visibility: hidden;
+}
+
+.cd-headline.type .cd-words-wrapper.selected b {
+    color: #2196F3;
+}
+
+.cd-headline.type b {
+    visibility: hidden;
+}
+
+.cd-headline.type b.is-visible {
+    visibility: visible;
+}
+
+ .parallax-container {
+  background-image: url('images/najibparallax.jpeg');
+  max-height: 400px;
+  background-attachment: fixed;
+  background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
+}
+
+.page-footer{
+  background-color: #202D50;
 }
 #footer{
   background-color: #202D50;
