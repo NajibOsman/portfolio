@@ -47,7 +47,7 @@ gem 'jbuilder', '~> 2.5'
 gem 'devise'
 gem 'rails_admin', '~> 1.2'
 gem 'toastr-rails'
-gem 'cancancan'
+
 end
 
 group :development, :test do
