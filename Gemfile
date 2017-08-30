@@ -24,7 +24,7 @@ gem 'sass-rails', '~> 5.0'
 gem 'materialize-sass', github: 'mkhairi/materialize-sass'
 gem 'material_icons'
 gem 'jquery-rails'
-gem 'compass-rails'
+
 # Use Uglifier as compressor for JavaScript assets
 gem 'uglifier', '>= 1.3.0'
 # See https://github.com/rails/execjs#readme for more supported runtimes
@@ -48,7 +48,7 @@ gem 'jbuilder', '~> 2.5'
 gem 'devise'
 gem 'rails_admin', '~> 1.2'
 gem 'toastr-rails'
-
+gem 'cancancan'
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console

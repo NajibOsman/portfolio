@@ -28,16 +28,23 @@
 <li><a href="/skills">Skills</a></li>
 <li><a href="/posts">My Blog</a></li>
 <li><a href="/referals">Referal</a></li>
-<li><a href="/users/sign_up">Sign Up</a></li>
-<li><a href="/users/sign_in">Login</a></li>
+<%if user_signed_in? %>
+  <li><%= link_to "Sign-Out", destroy_user_session_path, method: :delete %></li>
+<% else %>
+  <li><%= link_to "Sign-In", new_user_session_path,method: :get %></li>
+  <li><%= link_to "Sign-Up", new_user_registration_path,method: :get %></li>
+  <% end %>
 </ul>
 <ul class="side-nav" id="mobile-demo">
 <li><a href="/projects">Projects</a></li>
 <li><a href="/skills">Skills</a></li>
 <li><a href="/posts">My Blog</a></li>
 <li><a href="/referals">Referal</a></li>
-<li><a href="/users/sign_up">Sign Up</a></li>
-<li><a href="/users/sign_in">Login</a></li>
+<%if user_signed_in? %>
+  <li><%= link_to "Sign-Out", destroy_user_session_path, method: :delete %></li>
+<% else %>
+  <li><%= link_to "Sign-In", new_user_session_path,method: :get %></li>
+  <% end %>
 </ul>
 </div>
 </nav>
@@ -47,16 +54,17 @@
    <div class="container">
      <div class="row">
        <div class="col l6 s12">
-         <h5 class="white-text">About Me</h5>
-         <p class="grey-text text-lighten-4">This is an example footer created with materialize to demonstrate how easy it is to create footer with materialize.</p>
+         <h5 class="white-text">Contact Me</h5>
+         <p class="grey-text text-lighten-4">Email me on: machidydemajka38@gmail.com</p>
+         <p class="grey-text text-lighten-4">Phone No: 0727522338</p>
        </div>
        <div class="col l4 offset-l2 s12">
-         <h5 class="white-text">Tutorials</h5>
+         <h5 class="white-text">Follow me on</h5>
          <ul>
-           <li><a class="grey-text text-lighten-3" href="http://peexaweb.com">Angular 2</a></li>
-           <li><a class="grey-text text-lighten-3" href="http://peexaweb.com">Materialize</a></li>
-           <li><a class="grey-text text-lighten-3" href="http://peexaweb.com">Bootstrap</a></li>
-           <li><a class="grey-text text-lighten-3" href="http://peexaweb.com">SASS</a></li>
+           <li><a class="grey-text text-lighten-3" href="https://twitter.com/Naajib38Othmern"> Twitter</a></li>
+           <li><a class="grey-text text-lighten-3" href="https://www.facebook.com/profile.php?id=100004647108022"> Facebook</a></li>
+           <li><a class="grey-text text-lighten-3" href="https://github.com/NajibOsman">Github</a></li>
+           <li><a class="grey-text text-lighten-3" href="https://www.instagram.com/05car_jr_ner733p/">Instagram</a></li>
          </ul>
        </div>
      </div>
@@ -64,59 +72,9 @@
    <div class="footer-copyright">
      <div class="container">
      © 2017 Ner7eeP. All Rights Reserved.
-     <a class="grey-text text-lighten-4 right" href="http://peexaweb.com" target="_blank">More Links</a>
+     <a class="grey-text text-lighten-4 right" href="#" target="_blank"></a>
      </div>
    </div>
  </footer>
-
-<!-- <footer class="page-footer" id="footer">
-<div class="container">
-<div class="row">
-<div class="col l6 s12">
-<form id="contact" class="col s12" action="mailto:naajib38@gmail.com" method="post" enctype="text/plain">
-<div class="row center">
-<h5 class="white-text">Contact Me!</h5>
-<div class="input-field col s6">
-<i class="mdi-action-account-circle prefix white-text"></i>
-<input id="icon_prefix" name="name" type="text" class="validate white-text">
-<label for="icon_prefix" class="white-text">First Name</label>
-</div>
-<div class="input-field col s6">
-<i class="mdi-communication-email prefix white-text"></i>
-<input id="icon_email" name="email" type="email" class="validate white-text">
-<label for="icon_email" class="white-text">Email-id</label>
-</div>
-<div class="input-field col s12">
-<i class="mdi-editor-mode-edit prefix white-text"></i>
-<textarea id="icon_prefix2" name="message" class="materialize-textarea white-text"></textarea>
-<label for="icon_prefix2" class="white-text">Message</label>
-</div>
-<div class="col offset-s7 s5">
-<button class="btn waves-effect waves-light red darken-1" type="submit">Submit
-<i class="mdi-content-send right white-text"></i>
-</button>
-</div>
-</div>
-</form>
-</div>
-<div class="col l4 offset-l2 s12">
-<h5 class="white-text">Social media</h5>
-<ul>
-<li><a class="grey-text text-lighten-3" href="https://www.facebook.com/profile.php?id=100004647108022">Facebook</a></li>
-<li><a class="grey-text text-lighten-3" href="https://twitter.com/Naajib38Othmern">Twitter</a></li>
-<li><a class="grey-text text-lighten-3" href="https://github.com/NajibOsman">Github</a></li>
-<li><a class="grey-text text-lighten-3" href="mailto:naajib38@gmail.com">Email</a></li>
-</ul>
-</div>
-</div>
-</div>
-<div class="footer-copyright">
-<div class="container">
-© 2017 Copyright
-<a class="grey-text text-lighten-4 right" href="https://github.com/NajibOsman/portfolio">Created by Najib</a>
-</div>
-</div>
-</footer> -->
-
 </body>
 </html>
